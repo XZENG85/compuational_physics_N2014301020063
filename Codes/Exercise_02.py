@@ -1,0 +1,6 @@
+print("My English name is Noel :")
+print("#    #     ####     #####    #     ")
+print("##   #    #    #    #        #     ")
+print("# #  #    #    #    #####    #     ")
+print("#  # #    #    #    #        #     ")
+print("#    #     ####     #####    ##### ")
