@@ -14,7 +14,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 **2. Homework List**
 ----------------
 - [x] Exercise_01:Install python2.7 and write my first README.md on github.
-- [ ] Exercise_02:
+- [x] Exercise_02:[Write a program to type my English name with # in python.](https://www.zybuluo.com/allenoel/note/503309)
 - [ ] Exercise_03:
 - [ ] Exercise_04:
 - [ ] Exercise_05:
