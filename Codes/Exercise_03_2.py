@@ -49,10 +49,17 @@ for i in a:
     print(i)
 time.sleep(0.5)   
 i=os.system('cls')
-b.reverse()
-for i in b:
+def reverse1 (s):  
+    li = list(s)  
+    li.reverse()  
+    rt = "".join(li)  
+    return rt 
+b9=reverse1 (b09)
+c=[b01,b02,b03,b04,b05,b06,b07,b08,b9,b10,b11,b12,b13,b14,b15,b16,b17]
+for i in c:
     print(i)
 time.sleep(0.5)   
 i=os.system('cls')
+a.reverse()
 for i in a:
     print(i)
