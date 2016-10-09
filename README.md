@@ -16,7 +16,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_01:Install python2.7 and write my first README.md on github.
 - [x] Exercise_02:[Write a program to type my English name in python.](https://www.zybuluo.com/allenoel/note/503309)
 - [x] Exercise_03:[Move my English name horizontally and revolve object that I want.](https://www.zybuluo.com/allenoel/note/512913)
-- [ ] Exercise_04:
+- [x] Exercise_04:[Problem 1.5](https://www.zybuluo.com/allenoel/note/525748)
 - [ ] Exercise_05:
 - [ ] Exercise_06:
 - [ ] Exercise_07:
