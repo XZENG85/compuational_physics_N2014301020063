@@ -19,7 +19,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_04:[Problem 1.5](https://www.zybuluo.com/allenoel/note/525748)
 - [x] Exercise_05:[Problem 2.8&2.9](https://www.zybuluo.com/allenoel/note/533501)
 - [x] Exercise_06:[Problem 2.10(upgrated version)](https://www.zybuluo.com/allenoel/note/542002)
-- [ ] Exercise_07:
+- [x] Exercise_07:[Pendulum problems](https://www.zybuluo.com/allenoel/note/549991)
 - [ ] Exercise_08:
 - [ ] Exercise_09:
 - [ ] Exercise_10:
