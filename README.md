@@ -20,7 +20,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_05:[Problem 2.8&2.9](https://www.zybuluo.com/allenoel/note/533501)
 - [x] Exercise_06:[Problem 2.10(upgrated version)](https://www.zybuluo.com/allenoel/note/542002)
 - [x] Exercise_07:[Pendulum problems](https://www.zybuluo.com/allenoel/note/549991)
-- [ ] Exercise_08:
+- [x] Exercise_08:[Poincare section and bifurcation diagram](https://github.com/allenoel/compuational_physics_N2014301020063/blob/master/Markdown-Files/Exercise_08-Poincare%20section%20and%20bifurcation%20diagram.md)
 - [ ] Exercise_09:
 - [ ] Exercise_10:
 - [ ] Exercise_11:
