@@ -22,7 +22,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_07:[Pendulum problems](https://www.zybuluo.com/allenoel/note/549991)
 - [x] Exercise_08:[Poincare section and bifurcation diagram](https://github.com/allenoel/compuational_physics_N2014301020063/blob/master/Markdown-Files/Exercise_08-Poincare%20section%20and%20bifurcation%20diagram.md)
 - [x] Exercise_09:[The Billiard Problem](http://www.jianshu.com/p/8d9a698480d4)
-- [x] Exercise_10:[The precession of the  perihelion of Mercury.](http://www.jianshu.com/writer#/notebooks/7803580/notes/7089018/writing)
+- [x] Exercise_10:[The precession of the  perihelion of Mercury.](http://www.jianshu.com/p/3a3671b9f8dc)
 - [ ] Exercise_11:
 - [ ] Exercise_12:
 - [ ] Exercise_13:
