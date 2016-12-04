@@ -23,7 +23,7 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_08:[Poincare section and bifurcation diagram](https://github.com/allenoel/compuational_physics_N2014301020063/blob/master/Markdown-Files/Exercise_08-Poincare%20section%20and%20bifurcation%20diagram.md)
 - [x] Exercise_09:[The Billiard Problem](http://www.jianshu.com/p/8d9a698480d4)
 - [x] Exercise_10:[The precession of the  perihelion of Mercury.](http://www.jianshu.com/p/3a3671b9f8dc)
-- [ ] Exercise_11:
+- [x] Exercise_11:[Chaotic Tumbling of Hyperion](http://www.jianshu.com/p/d5fad9e2d784)
 - [ ] Exercise_12:
 - [ ] Exercise_13:
 - [ ] Exercise_14:
