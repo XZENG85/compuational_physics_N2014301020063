@@ -1,89 +1,93 @@
-from __future__ import division
-import matplotlib
 import numpy as np
-import matplotlib.cm as cm
-import matplotlib.mlab as mlab
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+from pylab import *
+from math import *
+import mpl_toolkits.mplot3d
 
+V0=[[0 for i in range(21)]for j in range(21)]#i represents x, j represents y
 
-# initialize the grid
+for i in [6]:
+    for j in range(7,14):
+        V0[j][i]=1.0# j,i
 
-grid = []
-for i in range(201):    
-    row_i = []
-    for j in range(201):
-        if i == 0 or i == 200 or j == 0 or j == 200:
-            voltage = 0
-        elif 60<=i<=140 and j == 60:
-            voltage = 1
-        elif 60<=i<=140 and j == 140:
-            voltage = -1
-        else:
-            voltage = 0
-        row_i.append(voltage)
-    grid.append(row_i)
+for i in [14]:
+    for j in range(7,14):
+        V0[j][i]=-1.0
+#check
+#for j in range(len(V0)):
+#    for i in range(len(V0[1])):
+#        print V0[i][j], 
+#    print
 
-# define the update_V function (Gauss-Seidel method)
+VV=[]
+VV.append(V0)
 
-def update_V(grid):
+s=0
+dx=0.1
+#iteration
+#for k in range(100):
+while 1:
+    VV.append(V0)
+    for i in range(1,len(V0)-1):
+        for j in range(1,len(V0[1])-1):
+            VV[s+1][i][j]=(VV[s][i+1][j]+VV[s][i-1][j]+VV[s][i][j+1]+VV[s][i][j-1])/4.0
+    for i in [6]:
+        for j in range(7,14):
+            VV[s+1][j][i]=1.0
+    for i in [14]:
+        for j in range(7,14):
+            VV[s+1][j][i]=-1.0
+    VV[s]=np.array(VV[s])
+    VV[s+1]=np.array(VV[s+1])
+    dVV=VV[s+1]-VV[s]
+    dV=0
+    for i in range(1,len(V0)-1):
+        for j in range(1,len(V0[1])-1):
+            dV=dV+abs(dVV[i][j])
+    #print dV 
+          
+    s=s+1
+    if dV<0.0001 and s>10:
+        break
+print (s)
 
-    delta_V = 0
+V=array(VV[-1])
+Ex=array(V0)
+Ey=array(V0)
+for j in range(1,len(V0)-1):
+    for i in range(1,len(V0[1])-1):
+        Ex[j][i]=-(V[j][i+1]-V[j][i-1])/(2*dx)
+        Ey[j][i]=-(V[j+1][i]-V[j-1][i])/(2*dx)
 
-    for i in range(201):    
-        for j in range(201):
-            if i == 0 or i == 200 or j == 0 or j == 200:
-                pass
-            elif 60<=i<=140 and j == 60:
-                pass
-            elif 60<=i<=140 and j == 140:
-                pass
-            else:
-                voltage_new = (grid[i+1][j]+grid[i-1][j]+grid[i][j+1]+grid[i][j-1])/4
-                voltage_old = grid[i][j]
-                delta_V += abs(voltage_new - voltage_old)
-                grid[i][j] = voltage_new
-
-    return grid, delta_V
-
-# define the Laplace_calculate function
-
-def Laplace_calculate(grid):
-
-    epsilon = 10**(-5)*200**2
-    grid_init = grid
-    delta_V = 0
-    N_iter = 0
-
-    while delta_V >= epsilon or N_iter <= 10:
-        grid_impr, delta_V = update_V(grid_init)
-        grid_new, delta_V = update_V(grid_impr)
-        grid_init = grid_new
-        N_iter += 1
-
-    return grid_new
-
-matplotlib.rcParams['xtick.direction'] = 'out'
-matplotlib.rcParams['ytick.direction'] = 'out'
-
-x = np.linspace(0,200,201)
-y = np.linspace(0,200,201)
-X, Y = np.meshgrid(x, y)
-Z = Laplace_calculate(grid)
-
-plt.figure()
-CS = plt.contour(X,Y,Z,10)
-plt.clabel(CS, inline=1, fontsize=12)
-plt.title('voltage near capacitor')
-plt.xlabel('x(m)')
-plt.ylabel('y(m)')
-
-fig = plt.figure()
+#for i in range(len(V)):
+#    for j in range(len(V[1])):
+#        print V[i][j], 
+#    print
+figure(figsize=[8,8])
+x=np.arange(-1.0,1.01,dx)#-1.0,-0.9,...,1.0
+y=np.arange(-1.0,1.01,dx)
+X,Y=np.meshgrid(x,y)
+CS = contour(X,Y,V,15)
+clabel(CS, inline=1, fontsize=10)
+xlim(-1,1)
+xlabel('x')
+ylim(-1,1)
+ylabel('y')
+title('contours of electric potential')
+savefig('electric potential J.png')
+fig = figure()
 ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, Z)
-ax.set_xlabel('x(m)')
-ax.set_ylabel('y(m)')
-ax.set_zlabel('voltage(V)')
-ax.set_title('voltage distribution')
-
-plt.show()
+ax.plot_surface(X, Y, V,rstride=1, cstride=1,linewidth=0)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('V')
+title('electric potential')
+savefig('electric potential J 3D.png')
+figure(figsize=[6,6])
+Q=quiver(X,Y,Ex,Ey,scale=100)
+xlim(-1,1)
+xlabel('x')
+ylim(-1,1)
+ylabel('y')
+title('electric field')
+savefig('electric field J.png')
+show()
