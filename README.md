@@ -24,6 +24,6 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_09:[The Billiard Problem](http://www.jianshu.com/p/8d9a698480d4)
 - [x] Exercise_10:[The precession of the  perihelion of Mercury.](http://www.jianshu.com/p/3a3671b9f8dc)
 - [x] Exercise_11:[Chaotic Tumbling of Hyperion](http://www.jianshu.com/p/d5fad9e2d784)
-- [ ] Exercise_12:
+- [x] Exercise_12:[Electric Potential and Fields](http://www.jianshu.com/p/1bd13f1977af)
 - [ ] Exercise_13:
 - [ ] Exercise_14:
