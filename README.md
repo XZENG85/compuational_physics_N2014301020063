@@ -25,5 +25,5 @@ This repository is for Computational Physics Class by Prof. Cai from Wuhan Unive
 - [x] Exercise_10:[The precession of the  perihelion of Mercury.](http://www.jianshu.com/p/3a3671b9f8dc)
 - [x] Exercise_11:[Chaotic Tumbling of Hyperion](http://www.jianshu.com/p/d5fad9e2d784)
 - [x] Exercise_12:[Electric Potential and Fields](http://www.jianshu.com/p/1bd13f1977af)
-- [ ] Exercise_13:
+- [x] Exercise_13:[Exercise_13：Frequency Spectrum of Waves on a String](http://www.jianshu.com/p/de7b6b653c85)
 - [ ] Exercise_14:
